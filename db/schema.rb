@@ -10,11 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_03_24_000957) do
+ActiveRecord::Schema[7.0].define(version: 2023_03_24_002056) do
   create_table "cultures", force: :cascade do |t|
     t.string "species", null: false
     t.string "strain"
     t.string "source"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "spawns", force: :cascade do |t|
+    t.string "substrate", null: false
+    t.integer "culture_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
