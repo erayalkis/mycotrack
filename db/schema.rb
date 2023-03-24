@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_03_24_231220) do
+ActiveRecord::Schema[7.0].define(version: 2023_03_24_231613) do
   create_table "blocks", force: :cascade do |t|
     t.integer "spawn_id", null: false
     t.string "substrate", null: false
@@ -24,6 +24,16 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_24_231220) do
     t.string "source"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "histories", force: :cascade do |t|
+    t.string "title"
+    t.text "content"
+    t.string "historyable_type", null: false
+    t.integer "historyable_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["historyable_type", "historyable_id"], name: "index_histories_on_historyable"
   end
 
   create_table "spawns", force: :cascade do |t|
