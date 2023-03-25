@@ -14,6 +14,7 @@ class CulturesControllerTest < ActiveSupport::TestCase
 
   test "should save with all attributes provided" do
     culture = Culture.new(genus: "Amanita", species: "Muscaria", source: "Cloned from nonexistent-culture-id")
+    assert culture.save, "Could not save with all attributes!"
   end
 
 end
