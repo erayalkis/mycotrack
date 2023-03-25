@@ -46,4 +46,10 @@ class CulturesController < ApplicationController
       render json: @culture
     end
   end
+
+  private
+
+  def culture_params
+    params.require(:culture).permit(:species, :strain, :source)
+  end
 end
