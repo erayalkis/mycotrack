@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_03_24_231613) do
+ActiveRecord::Schema[7.0].define(version: 2023_03_25_132358) do
   create_table "blocks", force: :cascade do |t|
     t.integer "spawn_id", null: false
     t.string "substrate", null: false
@@ -19,8 +19,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_24_231613) do
   end
 
   create_table "cultures", force: :cascade do |t|
-    t.string "species", null: false
-    t.string "strain"
+    t.string "genus", null: false
+    t.string "species"
     t.string "source"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
