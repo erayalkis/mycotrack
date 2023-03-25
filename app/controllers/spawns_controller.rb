@@ -5,7 +5,7 @@ class SpawnsController < ApplicationController
   end
 
   def get
-    @spawn = spawn.find(params[:id])
+    @spawn = Spawn.find(params[:id])
     render json: @spawn
   end
 
@@ -14,7 +14,7 @@ class SpawnsController < ApplicationController
   # end
 
   def create
-    @spawn = spawn.new(spawn_params)
+    @spawn = Spawn.new(spawn_params)
 
     if @spawn.save
       render json: @spawn
@@ -28,7 +28,7 @@ class SpawnsController < ApplicationController
   # end
 
   def update
-    @spawn = Cultur.find(params[:id])
+    @spawn = Spawn.find(params[:id])
 
     if @spawn.update_attributes(spawn_params)
       render json: @spawn
@@ -38,7 +38,7 @@ class SpawnsController < ApplicationController
   end
 
   def delete
-    @spawn = spawn.find(params[:id])
+    @spawn = Spawn.find(params[:id])
     
     if @spawn.nil?
       render json: ["spawn does not exist"]

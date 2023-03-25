@@ -28,7 +28,7 @@ class CulturesController < ApplicationController
   # end
 
   def update
-    @culture = Cultur.find(params[:id])
+    @culture = Culture.find(params[:id])
 
     if @culture.update_attributes(culture_params)
       render json: @culture
