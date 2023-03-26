@@ -52,6 +52,6 @@ class CulturesController < ApplicationController
   private
 
   def culture_params
-    params.require(:culture).permit(:species, :strain, :source)
+    params.require(:culture).permit(:genus, :species, :strain, :source)
   end
 end
