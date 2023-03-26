@@ -1,4 +1,6 @@
 class CulturesController < ApplicationController
+  before_action :authenticate_user!
+
   def index
     @cultures = Culture.all
     render json: @cultures
