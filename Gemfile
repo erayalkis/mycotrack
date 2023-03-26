@@ -39,6 +39,12 @@ gem "jbuilder"
 # Use Devise to authenticate users
 gem "devise"
 
+# Use devise-jwt to use JWT tokens for API authentication
+gem "devise-jwt"
+
+# Use rack-cors to handle CORS (Cross Origin Resource Sharing)
+gem "rack-cors"
+
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
 
