@@ -14,5 +14,6 @@ Rails.application.routes.draw do
     resources :cultures
     resources :spawns
     resources :blocks
+    get "/current_user", to: "application#return_current_user"
   end
 end
