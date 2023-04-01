@@ -1,4 +1,5 @@
 class Spawn < ApplicationRecord
-  has_one :culture
-  has_many :histores, as: :historyable
+  belongs_to :user
+  belongs_to :culture, optional: true
+  has_many :histories, as: :historyable
 end
