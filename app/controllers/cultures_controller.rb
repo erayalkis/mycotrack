@@ -2,7 +2,7 @@ class CulturesController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    @cultures = Culture.all
+    @cultures = Culture.all.where(user_id: current_user.id)
     render json: @cultures
   end
 

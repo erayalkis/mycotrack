@@ -1,6 +1,6 @@
 class SpawnsController < ApplicationController
   def index
-    @spawns = Spawn.all
+    @spawns = Spawn.all.where(user_id: current_user.id)
     render json: @spawns
   end
 
