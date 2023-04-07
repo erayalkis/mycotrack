@@ -30,7 +30,7 @@ class SpawnsController < ApplicationController
   def update
     @spawn = Spawn.find(params[:id])
 
-    if @spawn.update_attributes(spawn_params)
+    if @spawn.update(spawn_params)
       render json: @spawn
     else
       render json: @spawn.errors.full_messages, status: :internal_server_error
@@ -50,6 +50,6 @@ class SpawnsController < ApplicationController
   private
 
   def spawn_params
-    params.require(:spawn).permit(:substrate, :culture_id)
+    params.require(:spawn).permit(:substrate, :culture_id, :user_id)
   end
 end
