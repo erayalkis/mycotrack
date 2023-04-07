@@ -32,7 +32,7 @@ class CulturesController < ApplicationController
   def update
     @culture = Culture.find(params[:id])
 
-    if @culture.update_attributes(culture_params)
+    if @culture.update(culture_params)
       render json: @culture
     else
       render json: @culture.errors.full_messages, status: :internal_server_error
@@ -52,6 +52,6 @@ class CulturesController < ApplicationController
   private
 
   def culture_params
-    params.require(:culture).permit(:genus, :species, :strain, :source)
+    params.require(:culture).permit(:genus, :species, :strain, :source, :user_id)
   end
 end
