@@ -30,7 +30,7 @@ class BlocksController < ApplicationController
   def update
     @block = Block.find(params[:id])
 
-    if @block.update_attributes(block_params)
+    if @block.update(block_params)
       render json: @block
     else
       render json: @block.errors.full_messages, status: :internal_server_error
@@ -50,6 +50,6 @@ class BlocksController < ApplicationController
   private
 
   def block_params
-    params.require(:block).permit(:substrate, :spawn_id)
+    params.require(:block).permit(:substrate, :spawn_id, :user_id)
   end
 end
