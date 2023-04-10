@@ -37,12 +37,13 @@ class BlocksController < ApplicationController
     end
   end
 
-  def delete
+  def destroy
     @block = Block.find(params[:id])
     
     if @block.nil?
       render json: ["block does not exist"]
     else
+      @block.destroy
       render json: @block
     end
   end

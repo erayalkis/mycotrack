@@ -37,12 +37,13 @@ class SpawnsController < ApplicationController
     end
   end
 
-  def delete
+  def destroy
     @spawn = Spawn.find(params[:id])
     
     if @spawn.nil?
       render json: ["spawn does not exist"]
     else
+      @spawn.destroy
       render json: @spawn
     end
   end

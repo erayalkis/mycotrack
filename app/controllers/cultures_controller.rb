@@ -39,12 +39,13 @@ class CulturesController < ApplicationController
     end
   end
 
-  def delete
+  def destroy
     @culture = Culture.find(params[:id])
     
     if @culture.nil?
       render json: ["Culture does not exist"]
     else
+      @culture.destroy
       render json: @culture
     end
   end
