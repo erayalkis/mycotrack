@@ -10,13 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_04_01_182128) do
+ActiveRecord::Schema[7.0].define(version: 2023_04_10_234731) do
   create_table "blocks", force: :cascade do |t|
     t.integer "spawn_id"
     t.string "substrate", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "user_id", null: false
+    t.integer "status", default: 0, null: false
   end
 
   create_table "cultures", force: :cascade do |t|
