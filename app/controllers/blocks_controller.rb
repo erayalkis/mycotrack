@@ -51,6 +51,6 @@ class BlocksController < ApplicationController
   private
 
   def block_params
-    params.require(:block).permit(:substrate, :spawn_id, :user_id)
+    params.require(:block).permit(:substrate, :spawn_id, :user_id, :status)
   end
 end
