@@ -1,6 +1,6 @@
 class BlocksController < ApplicationController
   def index
-    @blocks = Block.all.where(id: current_user.id)
+    @blocks = Block.all.where(user_id: current_user.id)
     render json: @blocks
   end
 
