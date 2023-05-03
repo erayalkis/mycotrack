@@ -11,6 +11,9 @@
 # It's strongly recommended that you check this file into your version control system.
 
 ActiveRecord::Schema[7.0].define(version: 2023_04_10_234731) do
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "blocks", force: :cascade do |t|
     t.integer "spawn_id"
     t.string "substrate", null: false
@@ -33,7 +36,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_10_234731) do
     t.string "title"
     t.text "content"
     t.string "historyable_type", null: false
-    t.integer "historyable_id", null: false
+    t.bigint "historyable_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["historyable_type", "historyable_id"], name: "index_histories_on_historyable"
