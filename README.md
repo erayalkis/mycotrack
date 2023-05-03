@@ -8,9 +8,9 @@
     A Vue.js and Rails app for tracking mycelium samples.
     <br />
     <br />
-    <a href="https://github.com/erayalkis/mycotrack_frontend/issues">Report Bug</a>
+    <a href="https://github.com/erayalkis/mycotrack/issues">Report Bug</a>
     ·
-    <a href="https://github.com/erayalkis/mycotrack_frontend/issues">Request Feature</a>
+    <a href="https://github.com/erayalkis/mycotrack/issues">Request Feature</a>
   </p>
 
 # About MycoTrack:
@@ -89,7 +89,7 @@ And finally, run the server!
 Navigate to the frontend folder:
 
 ```
-  cd mycotrack_frontend
+  cd mycotrack
 ```
 
 Install npm packages:
@@ -106,4 +106,4 @@ Run the frontend server:
 
 # License
 
-Licensed under the [MIT License](https://github.com/erayalkis/mycotrack_frontend/blob/main/LICENSE)
+Licensed under the [MIT License](https://github.com/erayalkis/mycotrack/blob/main/LICENSE)
