@@ -6,6 +6,7 @@
 
   <p align="center">
     A Vue.js and Rails app for tracking mycelium samples.
+    <strong>This project is currently not being maintained!</strong>
     <br />
     <br />
     <a href="https://github.com/erayalkis/mycotrack/issues">Report Bug</a>
